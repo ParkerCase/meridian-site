@@ -31,6 +31,7 @@ meridianai-product-site/
 ## 🛠️ Setup & Development
 
 ### Quick Start
+
 ```bash
 # Clone/download the project
 cd meridianai-product-site
@@ -44,12 +45,14 @@ python -m http.server 8000
 ```
 
 ### Adding Your Assets
-1. Replace placeholder logo in `assets/images/meridianai-logo.svg`
+
+1. Replace placeholder logo in `assets/images/StroomAI.png`
 2. Add platform screenshot as `assets/images/platform-preview.jpg`
 3. Generate favicons and add to `assets/favicon/`
 4. Update contact information in the footer
 
 ### Customization
+
 - **Colors**: Edit CSS variables in `css/main.css`
 - **Content**: Update text in `index.html`
 - **Analytics**: Add tracking codes in the footer script section
@@ -57,6 +60,7 @@ python -m http.server 8000
 ## 🚀 Deployment
 
 ### Build for Production
+
 ```bash
 ./deploy.sh
 ```
@@ -64,6 +68,7 @@ python -m http.server 8000
 ### Hosting Options
 
 #### Netlify (Recommended)
+
 ```bash
 # Install Netlify CLI
 npm install -g netlify-cli
@@ -73,6 +78,7 @@ netlify deploy --prod --dir dist
 ```
 
 #### Vercel
+
 ```bash
 # Install Vercel CLI
 npm install -g vercel
@@ -82,6 +88,7 @@ vercel dist --prod
 ```
 
 #### Traditional Web Hosting
+
 1. Run `./deploy.sh`
 2. Upload `dist/` folder contents to your web server
 3. Point your domain to the hosting provider
@@ -96,18 +103,21 @@ vercel dist --prod
 ## 🔧 Technical Details
 
 ### Technologies Used
+
 - **HTML5**: Semantic markup
 - **CSS3**: Custom properties, Grid, Flexbox
 - **Vanilla JavaScript**: No frameworks, pure performance
 - **Progressive Enhancement**: Works without JavaScript
 
 ### Browser Support
+
 - Chrome 80+
 - Firefox 75+
 - Safari 13+
 - Edge 80+
 
 ### Accessibility
+
 - WCAG 2.1 AA compliant
 - Keyboard navigation
 - Screen reader friendly
@@ -124,6 +134,7 @@ vercel dist --prod
 ## 🎨 Design System
 
 ### Colors
+
 - Primary Blue: `#007aff`
 - Secondary Purple: `#5856d6`
 - Success Green: `#30d158`
@@ -131,11 +142,13 @@ vercel dist --prod
 - Text: `#f5f5f7`
 
 ### Typography
+
 - Primary: SF Pro Display/-apple-system
 - Sizes: Responsive scaling with clamp()
 - Weight: 400, 500, 600, 700
 
 ### Spacing
+
 - Base unit: 1rem (16px)
 - Scale: 0.5, 1, 1.5, 2, 3, 4, 6rem
 
@@ -149,6 +162,7 @@ vercel dist --prod
 ## 📞 Support
 
 For technical issues or customization requests:
+
 - Email: support@stroomai.com
 - Documentation: Check assets/README.md for asset requirements
 
