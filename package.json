@@ -6,10 +6,16 @@
   "scripts": {
     "dev": "python -m http.server 8000",
     "serve": "python3 -m http.server 8000",
-    "build": "echo 'Building site...' && cp -r . dist/",
+    "build": "echo 'Static site - no build required'",
     "deploy": "./deploy.sh"
   },
-  "keywords": ["AI", "Business Intelligence", "Enterprise", "CRM", "Integration"],
+  "keywords": [
+    "AI",
+    "Business Intelligence",
+    "Enterprise",
+    "CRM",
+    "Integration"
+  ],
   "author": "StroomAI",
   "license": "MIT",
   "devDependencies": {},
