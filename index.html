@@ -684,12 +684,70 @@
         color: #48d1cc !important;
       }
 
-      /* Force all text in footer logo to be RED for testing */
-      .footer-logo,
-      .footer-logo *,
-      .footer-logo::after,
-      .footer-logo::before {
-        color: #ff0000 !important;
+      /* NEW FOOTER STYLING - Fresh Layout */
+      .footer-brand-section {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .footer-brand-image {
+        width: 32px;
+        height: 32px;
+      }
+
+      .footer-brand-text {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #48d1cc !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        letter-spacing: -0.02em;
+      }
+
+      .footer-tagline {
+        color: var(--text-secondary);
+        margin-bottom: 1rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .footer-contact-section {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .footer-contact-links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .footer-contact-link {
+        color: var(--text-secondary);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .footer-contact-link:hover {
+        color: var(--accent-blue);
+      }
+
+      .footer-copyright {
+        border-top: 1px solid var(--border-color);
+        padding-top: 2rem;
+        text-align: center;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
       }
     </style>
     <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico" />
@@ -1077,36 +1135,37 @@
     <!-- Footer -->
     <footer class="footer" id="contact">
       <div class="footer-container">
-        <div
-          class="footer-logo"
-          style="
-            color: #48d1cc !important;
-            font-size: 1.5rem;
-            font-weight: 700;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-              'Helvetica Neue', Arial, sans-serif;
-            letter-spacing: -0.02em;
-          "
-        >
-          <img
-            src="/assets/images/StroomAI.png"
-            alt="MeridianAI Logo"
-            class="footer-logo-image"
-          />
-          <span style="color: #48d1cc !important">MeridianAI</span>
-        </div>
-        <p class="footer-description">
-          Transforming enterprise business intelligence through advanced AI
-          integration. Ready to revolutionize how your organization leverages
-          data?
-        </p>
-
-        <div class="footer-links">
-          <a href="mailto:info@stroomai.com">info@stroomai.com</a>
-          <a href="https://stroomai.com">StroomAI.com</a>
+        <!-- New Brand Section -->
+        <div class="footer-brand-section">
+          <div class="footer-brand">
+            <img
+              src="/assets/images/StroomAI.png"
+              alt="MeridianAI Logo"
+              class="footer-brand-image"
+            />
+            <div class="footer-brand-text">MeridianAI</div>
+          </div>
+          <p class="footer-tagline">
+            Transforming enterprise business intelligence through advanced AI
+            integration. Ready to revolutionize how your organization leverages
+            data?
+          </p>
         </div>
 
-        <div class="footer-bottom">
+        <!-- New Contact Section -->
+        <div class="footer-contact-section">
+          <div class="footer-contact-links">
+            <a href="mailto:info@stroomai.com" class="footer-contact-link"
+              >info@stroomai.com</a
+            >
+            <a href="https://stroomai.com" class="footer-contact-link"
+              >StroomAI.com</a
+            >
+          </div>
+        </div>
+
+        <!-- New Copyright Section -->
+        <div class="footer-copyright">
           <p>
             &copy; 2025 StroomAI. All rights reserved. | Enterprise AI Solutions
           </p>
