@@ -4,6 +4,7 @@
   --card-bg: #2a2a2a;
   --accent-blue: #007aff;
   --accent-green: #30d158;
+  --brand-teal: #20b2aa;
   --text-primary: #f5f5f7;
   --text-secondary: #a1a1a6;
   --border-color: #424245;
@@ -53,10 +54,10 @@ body {
   gap: 0.5rem;
   font-size: 1.5rem;
   font-weight: 700;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--brand-teal);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.02em;
 }
 
 .logo-image {
@@ -504,10 +505,10 @@ body {
   gap: 0.5rem;
   font-size: 1.5rem;
   font-weight: 700;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--brand-teal);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.02em;
   margin-bottom: 2rem;
 }
 
