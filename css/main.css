@@ -513,7 +513,7 @@ body {
   gap: 0.5rem;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--brand-teal);
+  color: #48d1cc;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   letter-spacing: -0.02em;
@@ -526,7 +526,7 @@ body {
 }
 
 .footer-logo > *:not(.footer-logo-image) {
-  color: var(--brand-teal);
+  color: #48d1cc;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   font-weight: 700;
