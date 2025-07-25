@@ -658,11 +658,17 @@
       }
 
       .footer-logo > *:not(.footer-logo-image) {
-        color: #48d1cc;
+        color: #48d1cc !important;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           "Helvetica Neue", Arial, sans-serif;
         font-weight: 700;
         letter-spacing: -0.02em;
+      }
+
+      /* Force footer logo text color with higher specificity */
+      footer .footer-logo,
+      footer .footer-logo * {
+        color: #48d1cc !important;
       }
     </style>
     <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico" />
@@ -670,6 +676,9 @@
     <!-- Preload critical resources -->
     <link rel="preload" href="css/main.css?v=2" as="style" />
     <link rel="preload" href="js/main.js" as="script" />
+
+    <!-- Load external CSS -->
+    <link rel="stylesheet" href="css/main.css?v=3" />
   </head>
   <body>
     <!-- Navigation -->
@@ -1053,7 +1062,16 @@
             alt="MeridianAI Logo"
             class="footer-logo-image"
           />
-          MeridianAI
+          <span
+            style="
+              color: #48d1cc !important;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+                'Helvetica Neue', Arial, sans-serif;
+              font-weight: 700;
+              letter-spacing: -0.02em;
+            "
+            >MeridianAI</span
+          >
         </div>
         <p class="footer-description">
           Transforming enterprise business intelligence through advanced AI
