@@ -615,6 +615,60 @@
         .hero h1 {
           font-size: 2.5rem;
         }
+
+        /* Mobile-specific improvements */
+        .cta-button,
+        .primary-cta,
+        .secondary-cta {
+          min-height: 44px; /* Touch-friendly minimum */
+          padding: 1rem 2rem;
+          font-size: 1rem;
+          border-radius: 25px;
+        }
+
+        .feature-card {
+          padding: 2rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .stat-card {
+          padding: 2rem 1.5rem;
+        }
+
+        /* Improve text readability on mobile */
+        .hero-description,
+        .feature-description,
+        .security-feature-desc {
+          font-size: 1rem;
+          line-height: 1.6;
+        }
+
+        /* Better spacing for mobile */
+        .features {
+          padding: 4rem 5%;
+        }
+
+        .security {
+          padding: 4rem 5%;
+        }
+
+        /* Mobile navigation improvements */
+        .nav {
+          padding: 0 3%;
+        }
+
+        .nav-container {
+          padding: 0.75rem 0;
+        }
+
+        .logo {
+          font-size: 1.3rem;
+        }
+
+        .logo-image {
+          width: 28px;
+          height: 28px;
+        }
       }
 
       @media (max-width: 480px) {
@@ -647,6 +701,196 @@
 
         .security-features {
           grid-template-columns: 1fr;
+        }
+
+        /* Extra small screen optimizations */
+        .hero h1 {
+          font-size: 2rem;
+          line-height: 1.2;
+        }
+
+        .hero-subtitle {
+          font-size: 1.2rem;
+        }
+
+        .hero-description {
+          font-size: 0.95rem;
+        }
+
+        .section-title {
+          font-size: 1.8rem;
+        }
+
+        .section-subtitle {
+          font-size: 1.1rem;
+        }
+
+        /* Smaller padding for very small screens */
+        .features,
+        .security {
+          padding: 3rem 5%;
+        }
+
+        .feature-card {
+          padding: 1.5rem;
+        }
+
+        /* Ensure buttons are still touch-friendly */
+        .cta-button,
+        .primary-cta,
+        .secondary-cta {
+          min-height: 48px;
+          padding: 1.2rem 2rem;
+          font-size: 1rem;
+        }
+      }
+
+      /* Mobile touch optimizations */
+      @media (hover: none) and (pointer: coarse) {
+        /* Improve touch targets */
+        a,
+        button,
+        .cta-button,
+        .primary-cta,
+        .secondary-cta {
+          min-height: 44px;
+          min-width: 44px;
+        }
+
+        /* Remove hover effects on touch devices */
+        .feature-card:hover,
+        .stat-card:hover,
+        .security-feature:hover {
+          transform: none;
+        }
+
+        .primary-cta:hover,
+        .secondary-cta:hover,
+        .cta-button:hover {
+          transform: none;
+          box-shadow: none;
+        }
+
+        /* Add active states for touch feedback */
+        .primary-cta:active,
+        .secondary-cta:active,
+        .cta-button:active {
+          transform: scale(0.98);
+          opacity: 0.9;
+        }
+      }
+
+      /* Prevent horizontal scrolling on mobile */
+      @media (max-width: 768px) {
+        body {
+          overflow-x: hidden;
+          width: 100%;
+        }
+
+        .nav,
+        .hero,
+        .features,
+        .security,
+        .stats,
+        .pricing,
+        .contact,
+        .footer {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+
+      /* Improve mobile performance */
+      @media (max-width: 768px) {
+        .scroll-fade {
+          transition: opacity 0.4s ease;
+        }
+
+        /* Reduce animations on mobile for better performance */
+        .feature-card,
+        .stat-card,
+        .security-feature {
+          will-change: auto;
+        }
+      }
+
+      /* Additional mobile improvements */
+      @media (max-width: 768px) {
+        /* Better text readability */
+        p,
+        li {
+          font-size: 1rem;
+          line-height: 1.6;
+        }
+
+        /* Improve button spacing */
+        .hero-cta {
+          gap: 1rem;
+          margin-bottom: 3rem;
+        }
+
+        /* Better card spacing */
+        .feature-card,
+        .stat-card,
+        .security-feature {
+          margin-bottom: 1.5rem;
+        }
+
+        /* Improve form elements on mobile */
+        input,
+        textarea,
+        select {
+          font-size: 16px; /* Prevents zoom on iOS */
+          min-height: 44px;
+        }
+
+        /* Better image handling */
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        /* Improve navigation transitions */
+        .nav {
+          transition: transform 0.3s ease, background 0.3s ease;
+        }
+      }
+
+      /* Extra small screen optimizations */
+      @media (max-width: 375px) {
+        .hero h1 {
+          font-size: 1.8rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1.1rem;
+        }
+
+        .section-title {
+          font-size: 1.6rem;
+        }
+
+        .cta-button,
+        .primary-cta,
+        .secondary-cta {
+          padding: 1rem 1.5rem;
+          font-size: 0.95rem;
+        }
+      }
+
+      /* Landscape mobile optimizations */
+      @media (max-width: 768px) and (orientation: landscape) {
+        .hero {
+          padding: 4rem 5% 2rem;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .features,
+        .security {
+          padding: 3rem 5%;
         }
       }
 
