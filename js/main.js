@@ -89,10 +89,13 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const statNumbers = entry.target.querySelectorAll(".stat-number");
-            // Only animate the first stat (200+ integrations)
-            if (statNumbers[0]) {
-              animateCounter(statNumbers[0], 200, "+");
-            }
+            // Animate all stats with their respective targets
+            statNumbers.forEach((statNumber) => {
+              const target = parseInt(statNumber.getAttribute("data-target"));
+              if (!isNaN(target)) {
+                animateCounter(statNumber, target, "");
+              }
+            });
             statsObserver.unobserve(entry.target);
           }
         });
@@ -275,10 +278,9 @@
     const counters = document.querySelectorAll(".stat-number");
 
     const animateCounter = (counter) => {
-      const target = parseInt(
-        counter.getAttribute("data-target") ||
-          counter.textContent.replace(/[^\d]/g, "")
-      );
+      const target = parseInt(counter.getAttribute("data-target"));
+      if (isNaN(target)) return; // Skip if no valid target
+
       const duration = 2000;
       const step = target / (duration / 16);
       let current = 0;
