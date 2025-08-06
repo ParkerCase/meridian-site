@@ -1,0 +1,40 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#grad3)"/>
+  <text x="400" y="200" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="white">Integration Hub</text>
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="white" opacity="0.9">Connect 200+ business tools seamlessly</text>
+  
+  <!-- Central hub -->
+  <circle cx="400" cy="350" r="60" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.8)" stroke-width="3"/>
+  <text x="400" y="355" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">HUB</text>
+  
+  <!-- Connected tools -->
+  <circle cx="200" cy="250" r="25" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <text x="200" y="255" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">CRM</text>
+  
+  <circle cx="600" cy="250" r="25" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <text x="600" y="255" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">Drive</text>
+  
+  <circle cx="200" cy="450" r="25" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <text x="200" y="455" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">Email</text>
+  
+  <circle cx="600" cy="450" r="25" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <text x="600" y="455" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">Slack</text>
+  
+  <!-- Connection lines -->
+  <line x1="260" y1="250" x2="340" y2="320" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <line x1="540" y1="250" x2="460" y2="320" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <line x1="260" y1="450" x2="340" y2="380" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <line x1="540" y1="450" x2="460" y2="380" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  
+  <!-- Additional small tools -->
+  <circle cx="150" cy="350" r="15" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+  <circle cx="650" cy="350" r="15" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+  <circle cx="400" cy="200" r="15" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+  <circle cx="400" cy="500" r="15" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+</svg> 

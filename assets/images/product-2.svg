@@ -1,0 +1,28 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#grad2)"/>
+  <text x="400" y="200" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="white">AI Analytics</text>
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="white" opacity="0.9">Advanced insights powered by machine learning</text>
+  
+  <!-- Chart elements -->
+  <rect x="150" y="300" width="500" height="150" rx="10" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+  
+  <!-- Bar chart -->
+  <rect x="180" y="400" width="40" height="30" fill="rgba(255,255,255,0.8)"/>
+  <rect x="240" y="380" width="40" height="50" fill="rgba(255,255,255,0.8)"/>
+  <rect x="300" y="360" width="40" height="70" fill="rgba(255,255,255,0.8)"/>
+  <rect x="360" y="340" width="40" height="90" fill="rgba(255,255,255,0.8)"/>
+  <rect x="420" y="320" width="40" height="110" fill="rgba(255,255,255,0.8)"/>
+  <rect x="480" y="300" width="40" height="130" fill="rgba(255,255,255,0.8)"/>
+  <rect x="540" y="350" width="40" height="80" fill="rgba(255,255,255,0.8)"/>
+  <rect x="600" y="370" width="40" height="60" fill="rgba(255,255,255,0.8)"/>
+  
+  <!-- Line chart -->
+  <polyline points="180,380 240,360 300,340 360,320 420,300 480,280 540,330 600,350" 
+            fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="3"/>
+</svg> 

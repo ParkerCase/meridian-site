@@ -155,7 +155,7 @@
       .hero h1 {
         font-size: clamp(2.5rem, 6vw, 4.5rem);
         font-weight: 700;
-        margin-top: 1.5rem;
+        margin-top: 3.9rem;
 
         margin-bottom: 2.5rem;
         background: linear-gradient(
@@ -795,6 +795,253 @@
         color: var(--text-secondary);
         font-size: 0.9rem;
       }
+
+      /* Product Showcase Section */
+      .product-showcase {
+        padding: 6rem 5%;
+        background: var(--primary-bg);
+      }
+
+      .showcase-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .showcase-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        background: var(--gradient-primary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .showcase-subtitle {
+        font-size: 1.3rem;
+        color: var(--text-secondary);
+        margin-bottom: 4rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .product-carousel {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .carousel-container {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+      }
+
+      .carousel-track {
+        position: relative;
+        height: 500px;
+        overflow: hidden;
+      }
+
+      .carousel-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .carousel-slide.active {
+        opacity: 1;
+      }
+
+      .product-image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .product-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease-in-out;
+      }
+
+      .carousel-slide:hover .product-image {
+        transform: scale(1.05);
+      }
+
+      .image-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(
+          transparent 20%,
+          rgba(0, 0, 0, 0.7) 60%,
+          rgba(0, 0, 0, 0.95) 100%
+        );
+        color: white;
+        padding: 2rem;
+        text-align: left;
+        transform: translateY(0);
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+        backdrop-filter: blur(2px);
+      }
+
+      .carousel-slide.active .image-overlay {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .image-overlay h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .image-overlay p {
+        font-size: 1rem;
+        opacity: 0.9;
+        line-height: 1.4;
+      }
+
+      .carousel-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.7);
+        border: none;
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 10;
+      }
+
+      .carousel-nav:hover {
+        background: rgba(0, 122, 255, 0.8);
+        transform: translateY(-50%) scale(1.1);
+      }
+
+      .carousel-nav.prev {
+        left: 20px;
+      }
+
+      .carousel-nav.next {
+        right: 20px;
+      }
+
+      .carousel-indicators {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 10;
+      }
+
+      .indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .indicator.active,
+      .indicator:hover {
+        background: var(--accent-blue);
+        border-color: var(--accent-blue);
+      }
+
+      /* Responsive adjustments for product showcase */
+      @media (max-width: 768px) {
+        .showcase-title {
+          font-size: 2.5rem;
+        }
+
+        .showcase-subtitle {
+          font-size: 1.1rem;
+        }
+
+        .carousel-track {
+          height: 350px;
+        }
+
+        .carousel-nav {
+          width: 40px;
+          height: 40px;
+        }
+
+        .carousel-nav.prev {
+          left: 10px;
+        }
+
+        .carousel-nav.next {
+          right: 10px;
+        }
+
+        .image-overlay {
+          padding: 1.5rem;
+        }
+
+        .image-overlay h3 {
+          font-size: 1.3rem;
+        }
+
+        .image-overlay p {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .showcase-title {
+          font-size: 2rem;
+        }
+
+        .carousel-track {
+          height: 250px;
+        }
+
+        .carousel-nav {
+          width: 35px;
+          height: 35px;
+        }
+
+        .image-overlay {
+          padding: 1rem;
+        }
+
+        .image-overlay h3 {
+          font-size: 1.1rem;
+        }
+
+        .image-overlay p {
+          font-size: 0.85rem;
+        }
+      }
     </style>
     <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico" />
 
@@ -846,6 +1093,133 @@
         </div>
         <div class="hero-visual">
           <!-- <img src="./assets/images/platform-preview.jpg" alt="MeridianAI Platform Preview" class="platform-image"> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Showcase Section -->
+    <section class="product-showcase">
+      <div class="showcase-container">
+        <h2 class="showcase-title scroll-fade">Platform Preview</h2>
+        <p class="showcase-subtitle scroll-fade">
+          Experience the power of MeridianAI's unified business intelligence
+          platform
+        </p>
+
+        <div class="product-carousel scroll-fade">
+          <div class="carousel-container">
+            <div class="carousel-track">
+              <!-- Product Image 1 -->
+              <div class="carousel-slide active">
+                <div class="product-image-wrapper">
+                  <img
+                    src="./assets/images/product-1.png"
+                    alt="MeridianAI Dashboard"
+                    class="product-image"
+                  />
+                  <div class="image-overlay">
+                    <h3>Executive Intelligence</h3>
+                    <p>AI-Powered with Real-Time Market Analysis</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product Image 2 -->
+              <div class="carousel-slide">
+                <div class="product-image-wrapper">
+                  <img
+                    src="./assets/images/product-2.png"
+                    alt="AI Analytics"
+                    class="product-image"
+                  />
+                  <div class="image-overlay">
+                    <h3>AI Knowledge Base</h3>
+                    <p>AI-Powered Chatbot with Intelligent Chart Generation</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product Image 3 -->
+              <div class="carousel-slide">
+                <div class="product-image-wrapper">
+                  <img
+                    src="./assets/images/product-3.png"
+                    alt="Integration Hub"
+                    class="product-image"
+                  />
+                  <div class="image-overlay">
+                    <h3>Multi-Sector AI Intelligence</h3>
+                    <p>with Automated Recommendations</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Product Image 4 -->
+              <div class="carousel-slide">
+                <div class="product-image-wrapper">
+                  <img
+                    src="./assets/images/product-4.png"
+                    alt="Knowledge Base"
+                    class="product-image"
+                  />
+                  <div class="image-overlay">
+                    <h3>Comprehensive Business Analytics</h3>
+                    <p>with Real-Time Intelligence</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Carousel Navigation -->
+            <button class="carousel-nav prev" aria-label="Previous slide">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+            </button>
+            <button class="carousel-nav next" aria-label="Next slide">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="m9 18 6-6-6-6" />
+              </svg>
+            </button>
+
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+              <button
+                class="indicator active"
+                data-slide="0"
+                aria-label="Go to slide 1"
+              ></button>
+              <button
+                class="indicator"
+                data-slide="1"
+                aria-label="Go to slide 2"
+              ></button>
+              <button
+                class="indicator"
+                data-slide="2"
+                aria-label="Go to slide 3"
+              ></button>
+              <button
+                class="indicator"
+                data-slide="3"
+                aria-label="Go to slide 4"
+              ></button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1220,6 +1594,131 @@
     </footer>
 
     <script src="/js/main.js"></script>
+
+    <!-- Product Carousel JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".product-carousel");
+        if (!carousel) return;
+
+        const slides = carousel.querySelectorAll(".carousel-slide");
+        const indicators = carousel.querySelectorAll(".indicator");
+        const prevBtn = carousel.querySelector(".carousel-nav.prev");
+        const nextBtn = carousel.querySelector(".carousel-nav.next");
+
+        let currentSlide = 0;
+        let autoPlayInterval;
+
+        // Initialize carousel
+        function initCarousel() {
+          showSlide(currentSlide);
+          startAutoPlay();
+        }
+
+        // Show specific slide
+        function showSlide(index) {
+          // Remove active class from all slides and indicators
+          slides.forEach((slide, i) => {
+            slide.classList.remove("active");
+            if (i === index) {
+              slide.classList.add("active");
+            }
+          });
+
+          indicators.forEach((indicator, i) => {
+            indicator.classList.remove("active");
+            if (i === index) {
+              indicator.classList.add("active");
+            }
+          });
+
+          currentSlide = index;
+        }
+
+        // Next slide
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          showSlide(currentSlide);
+        }
+
+        // Previous slide
+        function prevSlide() {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(currentSlide);
+        }
+
+        // Start auto-play
+        function startAutoPlay() {
+          autoPlayInterval = setInterval(nextSlide, 8000); // Change slide every 8 seconds
+        }
+
+        // Stop auto-play
+        function stopAutoPlay() {
+          clearInterval(autoPlayInterval);
+        }
+
+        // Event listeners
+        if (prevBtn) {
+          prevBtn.addEventListener("click", () => {
+            prevSlide();
+            stopAutoPlay();
+            startAutoPlay();
+          });
+        }
+
+        if (nextBtn) {
+          nextBtn.addEventListener("click", () => {
+            nextSlide();
+            stopAutoPlay();
+            startAutoPlay();
+          });
+        }
+
+        // Indicator clicks
+        indicators.forEach((indicator, index) => {
+          indicator.addEventListener("click", () => {
+            showSlide(index);
+            stopAutoPlay();
+            startAutoPlay();
+          });
+        });
+
+        // Removed hover pause to prevent slide skipping issues
+
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carousel.addEventListener("touchstart", (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carousel.addEventListener("touchend", (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          handleSwipe();
+        });
+
+        function handleSwipe() {
+          const swipeThreshold = 50;
+          const diff = touchStartX - touchEndX;
+
+          if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+              // Swipe left - next slide
+              nextSlide();
+            } else {
+              // Swipe right - previous slide
+              prevSlide();
+            }
+            stopAutoPlay();
+            startAutoPlay();
+          }
+        }
+
+        // Initialize the carousel
+        initCarousel();
+      });
+    </script>
 
     <!-- HubSpot Analytics -->
     <script
